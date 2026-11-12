@@ -8,7 +8,19 @@
 .s1 .open{left:35%;top:81%;width:30%;height:18%}.s2 .no{left:8%;top:40%;width:27%;height:19%}.s2 .yes{left:64%;top:40%;width:27%;height:19%}.s3 .no{left:8%;top:39%;width:27%;height:20%}.s3 .yes{left:64%;top:39%;width:27%;height:20%}.s4 .know{left:30%;top:55%;width:40%;height:15%}.s5 .next{left:37%;top:70%;width:26%;height:15%}.s6 .next{left:12.5%;top:78%;width:16%;height:13%}
 .nudge{display:none;position:absolute;left:50%;top:62%;transform:translateX(-50%);max-width:88%;padding:9px 15px;border-radius:20px;background:rgba(255,255,255,.97);color:#9b4356;font-weight:700;text-align:center;box-shadow:0 3px 14px rgba(110,40,60,.14);white-space:nowrap}.nudge.show{display:block}
 @media(max-width:520px){body{padding:8px}.slide{width:min(100%, calc((100vh - 16px) * 1.78))}}
-.birthday-scene{display:block;width:100%;height:auto}.s1 .lid-assembly{transform-box:fill-box;transform-origin:50% 100%;animation:giftLid 3.6s cubic-bezier(.42,0,.58,1) infinite}.s1 .gift-sparkles{transform-origin:50% 50%;animation:giftGlow 3.6s ease-in-out infinite}@keyframes giftLid{0%,12%,100%{transform:translateY(0) rotate(0deg)}38%,62%{transform:translateY(-34px) rotate(-17deg)}82%{transform:translateY(0) rotate(0deg)}}@keyframes giftGlow{0%,15%,82%,100%{opacity:0;transform:scale(.7)}38%,62%{opacity:1;transform:scale(1.08)}}@media(prefers-reduced-motion:reduce){.s1 .lid-assembly,.s1 .gift-sparkles{animation:none}}</style></head><body>
+.birthday-scene{display:block;width:100%;height:auto}.s1 .lid-assembly{transform-box:fill-box;transform-origin:50% 100%;animation:giftLid 3.6s cubic-bezier(.42,0,.58,1) infinite}.s1 .gift-sparkles{transform-origin:50% 50%;animation:giftGlow 3.6s ease-in-out infinite}@keyframes giftLid{0%,12%,100%{transform:translateY(0) rotate(0deg)}38%,62%{transform:translateY(-34px) rotate(-17deg)}82%{transform:translateY(0) rotate(0deg)}}@keyframes giftGlow{0%,15%,82%,100%{opacity:0;transform:scale(.7)}38%,62%{opacity:1;transform:scale(1.08)}}@media(prefers-reduced-motion:reduce){.s1 .lid-assembly,.s1 .gift-sparkles{animation:none}}
+/* Slide 2: gentle motion accents; original artwork and wording stay untouched */
+.s2{isolation:isolate}
+.s2::before,.s2::after{content:"";position:absolute;z-index:2;pointer-events:none;opacity:.78;font-family:system-ui,sans-serif}
+.s2::before{content:"♡";left:3.5%;top:12%;font-size:clamp(22px,4vw,38px);color:#f28da9;text-shadow:0 2px 8px #fff;animation:s2FloatA 3.8s ease-in-out infinite}
+.s2::after{content:"🐾";right:3.5%;bottom:10%;font-size:clamp(20px,3.4vw,32px);filter:drop-shadow(0 2px 5px #fff);animation:s2FloatB 4.4s ease-in-out infinite}
+.s2 .yes{transform-origin:center;animation:s2YesPulse 2.5s ease-in-out infinite}
+.s2 .yes:focus-visible{outline:3px solid #e56f91;outline-offset:4px}
+@keyframes s2FloatA{0%,100%{transform:translateY(0) rotate(-8deg) scale(1)}50%{transform:translateY(-11px) rotate(8deg) scale(1.12)}}
+@keyframes s2FloatB{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-9px) rotate(-12deg)}}
+@keyframes s2YesPulse{0%,100%{filter:drop-shadow(0 0 0 rgba(240,120,160,0));}50%{filter:drop-shadow(0 0 8px rgba(240,120,160,.42));}}
+@media(prefers-reduced-motion:reduce){.s2::before,.s2::after,.s2 .yes{animation:none}}
+</style></head><body>
 <main class="slide s1 active" id="slide1">
 <svg class="birthday-scene" viewBox="0 0 925 523" role="img" aria-label="A cute birthday surprise with a gift box that opens and closes" xmlns="http://www.w3.org/2000/svg">
 <defs>
