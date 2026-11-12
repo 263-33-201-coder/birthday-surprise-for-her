@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#fff7f8"><title>A little birthday surprise 💗</title>
+<style>
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:#fff7f8}body{min-height:100vh;display:grid;place-items:center;padding:16px;font-family:system-ui,sans-serif}
+.slide{position:relative;width:min(100%,900px);overflow:hidden;display:none}.slide.active{display:block}.slide img{display:block;width:100%;height:auto}
+.s1{aspect-ratio:561/317}.s2{aspect-ratio:551/291}.s3{aspect-ratio:551/307}.s4{aspect-ratio:551/306}.s5{aspect-ratio:551/310}.s6{aspect-ratio:557/325}.s7{aspect-ratio:561/314}
+.hit{position:absolute;border:0;border-radius:999px;background:transparent;cursor:pointer;-webkit-tap-highlight-color:transparent}.hit:focus-visible{outline:3px solid #a52b45;outline-offset:3px}
+.s1 .open{left:35%;top:81%;width:30%;height:18%}.s2 .no{left:8%;top:40%;width:27%;height:19%}.s2 .yes{left:64%;top:40%;width:27%;height:19%}.s3 .no{left:8%;top:39%;width:27%;height:20%}.s3 .yes{left:64%;top:39%;width:27%;height:20%}.s4 .know{left:30%;top:55%;width:40%;height:15%}.s5 .next{left:37%;top:70%;width:26%;height:15%}.s6 .next{left:12.5%;top:78%;width:16%;height:13%}
+.nudge{display:none;position:absolute;left:50%;top:62%;transform:translateX(-50%);max-width:88%;padding:9px 15px;border-radius:20px;background:rgba(255,255,255,.97);color:#9b4356;font-weight:700;text-align:center;box-shadow:0 3px 14px rgba(110,40,60,.14);white-space:nowrap}.nudge.show{display:block}
+@media(max-width:520px){body{padding:8px}}
+</style></head><body>
+<main class="slide s1 active" id="slide1"><img src="assets/slide-1.jpg" alt="Birthday surprise opening slide"><button class="hit open" aria-label="Click to open" onclick="go(2)"></button></main>
+<main class="slide s2" id="slide2"><img src="assets/slide-2.jpg" alt="Are you ready?"><button class="hit no" aria-label="No" onclick="nudge(2)"></button><button class="hit yes" aria-label="Yes" onclick="go(3)"></button><div class="nudge" id="nudge2">Try again! 💗</div></main>
+<main class="slide s3" id="slide3"><img src="assets/slide-3.jpg" alt="Do you know how much I love you?"><button class="hit no" aria-label="You don't" onclick="nudge(3)"></button><button class="hit yes" aria-label="Infinite" onclick="go(4)"></button><div class="nudge" id="nudge3">Try again! 💗</div></main>
+<main class="slide s4" id="slide4"><img src="assets/slide-4.jpg" alt="You know what I love the most?"><button class="hit know" aria-label="Click to know" onclick="go(5)"></button></main>
+<main class="slide s5" id="slide5"><img src="assets/slide-5.jpg" alt="Your beautiful smile and hypnotic eyes"><button class="hit next" aria-label="Next" onclick="go(6)"></button></main>
+<main class="slide s6" id="slide6"><img src="assets/slide-6.jpg" alt="How I feel for you"><button class="hit next" aria-label="Click" onclick="go(7)"></button></main>
+<main class="slide s7" id="slide7"><img src="assets/slide-7.jpg" alt="Happy Birthday — final slide"></main>
+<script>function go(n){document.querySelectorAll('.slide').forEach(s=>s.classList.remove('active'));document.getElementById('slide'+n).classList.add('active');window.scrollTo(0,0)}function nudge(n){document.getElementById('nudge'+n).classList.add('show')}</script>
+</body></html>
